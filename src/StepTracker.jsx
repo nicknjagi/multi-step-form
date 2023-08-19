@@ -2,8 +2,7 @@ import React from 'react'
 
 const StepTracker = () => {
   return (
-    <div>
-      
+    <div className='step-tracker'>
     </div>
   )
 }
