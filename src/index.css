@@ -7,3 +7,7 @@
 body {
   @apply bg-Magnolia font-ubuntu
 }
+
+.step-tracker{
+  @apply flex md:flex-col p-8 w-full md:w-64 bg-[url('./assets/images/bg-sidebar-mobile.svg')] md:bg-[url('./assets/images/bg-sidebar-desktop.svg')] bg-cover bg-center bg-no-repeat
+}
