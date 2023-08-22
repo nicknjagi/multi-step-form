@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import StepTracker from './StepTracker'
+import PersonalInfo from './forms/PersonalInfo'
 
 function App() {
 
@@ -7,6 +8,7 @@ function App() {
     <>
       <main>
         <StepTracker />
+        <PersonalInfo />
       </main>
     </>
   )
