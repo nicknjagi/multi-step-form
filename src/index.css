@@ -9,7 +9,7 @@ body {
 }
 
 .step-tracker{
-  @apply flex justify-center gap-4 md:flex-col p-8 w-full md:w-64 bg-[url('./assets/images/bg-sidebar-mobile.svg')] md:bg-[url('./assets/images/bg-sidebar-desktop.svg')] bg-cover bg-center bg-no-repeat
+  @apply flex justify-center items-start gap-4 md:flex-col p-8 w-full h-[25vh] md:w-64 bg-[url('./assets/images/bg-sidebar-mobile.svg')] md:bg-[url('./assets/images/bg-sidebar-desktop.svg')] bg-cover bg-center bg-no-repeat
 }
 
 .step {
@@ -42,7 +42,11 @@ h2{
 
 /* personal info form */
 .personal-info {
-  @apply text-Cool-gray flex flex-col bg-white mx-4 md:mx-0 px-5 py-8 rounded-lg -translate-y-9
+  @apply text-Cool-gray flex flex-col bg-white mx-4 md:mx-0 px-5 py-8 rounded-lg -translate-y-[5.2rem] md:translate-y-0
+}
+
+.personal-info p {
+  @apply my-3
 }
 
 .personal-info label {
