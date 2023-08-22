@@ -35,3 +35,16 @@ body {
 .step-label-container h3{
   @apply text-white font-medium leading-3
 }
+
+h2{
+  @apply text-Marine-blue text-2xl font-bold
+}
+
+/* personal info form */
+.personal-info {
+  @apply text-Cool-gray flex flex-col bg-white mx-4 md:mx-0 px-5 py-8 rounded-lg -translate-y-9
+}
+
+.personal-info label {
+  @apply text-Marine-blue font-medium
+}
