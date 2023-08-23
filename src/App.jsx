@@ -4,14 +4,37 @@ import PersonalInfo from './forms/PersonalInfo'
 import NextToggle from './NextToggle'
 
 function App() {
+  const [currentStep, setCurrentStep] = useState(1)
+
+  const handleNextStep = () => {
+    if(currentStep === 4){
+      handleSubmit()
+      return
+    }
+    setCurrentStep((curr)=>curr + 1)
+    console.log(currentStep);
+  }
+
+  const handlePrevStep = () => {
+    if(currentStep === 1){
+      return
+    }
+    setCurrentStep((curr)=>curr - 1)
+    console.log(currentStep);
+  }
+
+  const handleSubmit = (e) => {
+    e.preventDefault()
+    console.log('form submitted!');
+  }
 
   return (
     <>
       <main>
         <StepTracker />
-        <form className="form-container">
-          <PersonalInfo />
-          <NextToggle />
+        <form onSubmit={handleSubmit} className="form-container">
+          {currentStep === 1 && <PersonalInfo />}
+          <NextToggle handleNextStep={handleNextStep} handlePrevStep={handlePrevStep} currentStep={currentStep}/>
         </form>
       </main>
     </>
