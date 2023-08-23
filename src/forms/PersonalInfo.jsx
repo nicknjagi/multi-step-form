@@ -10,7 +10,7 @@ const PersonalInfo = () => {
       <label htmlFor="email">Email Address</label>
       <input type="email" name="email" id="email" placeholder='e.g stephenking@lorem.com' />
       <label htmlFor="phone">Phone Number</label>
-      <input type="text" placeholder='e.g. +1 234 567 890' />
+      <input type="number" placeholder='e.g. +1 234 567 890' />
     </form>
   )
 }
