@@ -57,7 +57,7 @@ main{
 }
 
 .form-container{
-  @apply md:px-24 
+  @apply md:px-8 lg:px-24
 }
 
 /* personal info form */
