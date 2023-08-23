@@ -5,11 +5,11 @@
 @tailwind utilities;
 
 body {
-  @apply bg-Magnolia font-ubuntu
+  @apply bg-Magnolia font-ubuntu md:grid md:justify-center md:items-center md:min-h-[100vh]
 }
 
 .step-tracker{
-  @apply flex justify-center items-start gap-4 md:flex-col p-8 w-full h-[25vh] md:w-64 bg-[url('./assets/images/bg-sidebar-mobile.svg')] md:bg-[url('./assets/images/bg-sidebar-desktop.svg')] bg-cover bg-center bg-no-repeat
+  @apply flex justify-center md:justify-start items-start gap-4 md:gap-6 md:flex-col p-8 w-full h-[25vh] md:h-auto md:m-3 md:w-64 md:rounded-md bg-[url('./assets/images/bg-sidebar-mobile.svg')] md:bg-[url('./assets/images/bg-sidebar-desktop.svg')] bg-cover bg-center bg-no-repeat
 }
 
 .step {
@@ -40,21 +40,25 @@ h2{
   @apply text-Marine-blue text-2xl font-bold
 }
 
+main{
+  @apply max-w-[940px] mx-auto md:flex md:bg-white md:rounded-md
+}
+
 /* personal info form */
 .personal-info {
-  @apply text-Cool-gray flex flex-col bg-white mx-4 md:mx-0 px-5 py-8 rounded-lg -translate-y-[5.2rem] md:translate-y-0
+  @apply text-Cool-gray flex flex-col bg-white mx-4 md:max-w-[640px] md:mx-0 px-5 md:px-24 py-8 md:py-12 rounded-lg -translate-y-[5.2rem] md:translate-y-0
 }
 
 .personal-info p {
-  @apply my-3
+  @apply my-2 md:mb-8
 }
 
 .personal-info label {
-  @apply text-Marine-blue font-medium
+  @apply text-Marine-blue font-medium mb-1
 }
 
 .personal-info input {
-  @apply py-2 px-4 border border-Light-gray focus:border-Marine-blue rounded-md mb-3 outline-none cursor-pointer
+  @apply py-2 px-4 border border-Light-gray focus:border-Purplish-blue rounded-md mb-3 md:mb-5 outline-none cursor-pointer
 }
 
 .personal-info input[type='number']::-webkit-inner-spin-button{
