@@ -9,10 +9,10 @@ function App() {
     <>
       <main>
         <StepTracker />
-        <div className="form-container">
+        <form className="form-container">
           <PersonalInfo />
           <NextToggle />
-        </div>
+        </form>
       </main>
     </>
   )
