@@ -45,7 +45,15 @@ main{
 }
 
 .next-toggle{
-  @apply flex justify-between px-5 py-6 w-full bg-white absolute bottom-0 md:bottom-auto md:left-auto left-0 md:relative
+  @apply flex items-center justify-between px-5 py-6 w-full bg-white absolute bottom-0 md:bottom-auto md:left-auto left-0 md:relative
+}
+
+.next-toggle a{
+  @apply text-Cool-gray hover:text-Marine-blue hover:font-medium
+}
+
+.next-toggle button{
+  @apply px-4 py-2 text-white rounded-md bg-Marine-blue hover:bg-[hsl(217,70%,33%)]
 }
 
 .form-container{
@@ -72,4 +80,5 @@ main{
 .personal-info input[type='number']::-webkit-inner-spin-button{
   @apply appearance-none m-0
 }
+
 
