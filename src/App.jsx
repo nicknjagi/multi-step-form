@@ -8,7 +8,6 @@ function App() {
 
   const handleNextStep = () => {
     if(currentStep === 4){
-      handleSubmit()
       return
     }
     setCurrentStep((curr)=>curr + 1)
