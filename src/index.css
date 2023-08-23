@@ -48,11 +48,11 @@ main{
   @apply flex items-center justify-between px-5 py-6 w-full bg-white absolute bottom-0 md:bottom-auto md:left-auto left-0 md:relative
 }
 
-.next-toggle a{
+.prev{
   @apply text-Cool-gray hover:text-Marine-blue hover:font-medium
 }
 
-.next-toggle button{
+.next-btn{
   @apply px-4 py-2 text-white rounded-md bg-Marine-blue hover:bg-[hsl(217,70%,33%)]
 }
 
