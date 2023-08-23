@@ -52,3 +52,11 @@ h2{
 .personal-info label {
   @apply text-Marine-blue font-medium
 }
+
+.personal-info input {
+  @apply py-2 px-4 border border-Light-gray focus:border-Marine-blue rounded-md mb-3 outline-none cursor-pointer
+}
+
+.personal-info input[type='number']::-webkit-inner-spin-button{
+  @apply appearance-none m-0
+}
