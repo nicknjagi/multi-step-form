@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import StepTracker from './StepTracker'
 import PersonalInfo from './forms/PersonalInfo'
+import NextToggle from './NextToggle'
 
 function App() {
 
@@ -8,7 +9,10 @@ function App() {
     <>
       <main>
         <StepTracker />
-        <PersonalInfo />
+        <div className="form-container">
+          <PersonalInfo />
+          <NextToggle />
+        </div>
       </main>
     </>
   )
