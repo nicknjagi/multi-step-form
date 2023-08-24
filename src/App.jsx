@@ -2,6 +2,7 @@ import { useState } from 'react'
 import StepTracker from './StepTracker'
 import PersonalInfo from './forms/PersonalInfo'
 import NextToggle from './NextToggle'
+import Plan from './forms/Plan'
 
 function App() {
   const [currentStep, setCurrentStep] = useState(1)
@@ -33,6 +34,8 @@ function App() {
         <StepTracker currentStep={currentStep}/>
         <form onSubmit={handleSubmit} className="form-container">
           {currentStep === 1 && <PersonalInfo />}
+          {currentStep === 2 && <Plan />}
+
           <NextToggle handleNextStep={handleNextStep} handlePrevStep={handlePrevStep} currentStep={currentStep}/>
         </form>
       </main>
