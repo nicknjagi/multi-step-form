@@ -30,7 +30,7 @@ function App() {
   return (
     <>
       <main>
-        <StepTracker />
+        <StepTracker currentStep={currentStep}/>
         <form onSubmit={handleSubmit} className="form-container">
           {currentStep === 1 && <PersonalInfo />}
           <NextToggle handleNextStep={handleNextStep} handlePrevStep={handlePrevStep} currentStep={currentStep}/>
