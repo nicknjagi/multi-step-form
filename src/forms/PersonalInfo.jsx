@@ -7,7 +7,7 @@ const PersonalInfo = () => {
   }
 
   return (
-    <div className='personal-info'>
+    <section className='personal-info'>
       <h2>Personal info</h2>
       <p>Please provide your name, email address, and phone number.</p>
       <label htmlFor="name">Name</label>
@@ -16,7 +16,7 @@ const PersonalInfo = () => {
       <input onChange={(e)=>handleChange(e)} type="email" name="email" id="email" placeholder='e.g stephenking@lorem.com' />
       <label htmlFor="phone">Phone Number</label>
       <input onChange={(e)=>handleChange(e)} type="number" placeholder='e.g. +1 234 567 890' />
-    </div>
+    </section>
   )
 }
 
