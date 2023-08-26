@@ -65,7 +65,7 @@ main{
 }
 
 /* personal info form */
-.personal-info {
+.personal-info, .plan {
   @apply text-Cool-gray flex flex-col bg-white mx-4 md:max-w-[640px] md:mx-0 px-5 py-8 md:py-12 rounded-lg -translate-y-[5.2rem] md:translate-y-0
 }
 
@@ -85,4 +85,5 @@ main{
   @apply appearance-none m-0
 }
 
+/* plan */
 
