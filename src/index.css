@@ -78,7 +78,7 @@ main{
 }
 
 .personal-info input {
-  @apply py-2 px-4 border border-Light-gray focus:border-Purplish-blue rounded-md mb-3 md:mb-5 outline-none cursor-pointer
+  @apply py-2 px-4 max-w-sm md:max-w-full border border-Light-gray focus:border-Purplish-blue rounded-md mb-3 md:mb-5 outline-none cursor-pointer
 }
 
 .personal-info input[type='number']::-webkit-inner-spin-button{
@@ -90,7 +90,7 @@ main{
   @apply grid md:grid-cols-3 gap-3 mt-4 mb-6 md:mt-0 md:mb-8
 }
 .plans-container label{
-  @apply flex items-start md:flex-col gap-4 p-4 max-w-sm border border-Light-gray text-Marine-blue font-medium rounded-lg
+  @apply flex items-start md:flex-col gap-4 p-4 max-w-sm md:max-w-full border border-Light-gray text-Marine-blue font-medium rounded-lg
 }
 .plans-container label.active{
   @apply border-Purplish-blue bg-[rgba(204,201,251,0.1)]
