@@ -41,8 +41,8 @@ const Plan = () => {
         <input type="radio" name="plan" id="pro" />
       </div>
 
-      <div>
-        <label htmlFor="monthly">Monthly</label>
+      <div className='billing-container'>
+        <label className='active' htmlFor="monthly">Monthly</label>
         <input type="radio" name="billing" id="monthly" />
 
         <div className='toggle'>
