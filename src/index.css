@@ -41,7 +41,7 @@ h2{
 }
 
 main{
-  @apply w-full md:w-[740px] lg:w-[960px] h-auto md:h-[600px] mx-auto md:flex md:bg-white md:rounded-md
+  @apply w-full md:min-w-[740px] lg:w-[960px] h-auto md:h-[600px] mx-auto md:flex md:bg-white md:rounded-md
 }
 
 .next-toggle{
@@ -61,11 +61,11 @@ main{
 }
 
 .form-container{
-  @apply md:relative w-full px-4 xl:px-10
+  @apply md:relative w-full px-0 xl:px-14
 }
 
 /* personal info form */
-.personal-info, .plan {
+section {
   @apply text-Cool-gray flex flex-col bg-white mx-4 md:max-w-[640px] md:mx-0 px-5 py-8 md:py-12 rounded-lg -translate-y-[5.2rem] md:translate-y-0
 }
 
@@ -109,7 +109,7 @@ main{
   @apply text-Cool-gray
 }
 .billing-container{
-  @apply flex gap-6 justify-center py-4 rounded-lg bg-[#F8F9FE]
+  @apply flex gap-6 justify-center py-4 rounded-lg bg-[#F8F9FE] max-w-sm md:max-w-full
 }
 .billing-container label.active{
   @apply text-Marine-blue
@@ -122,4 +122,21 @@ main{
 }
 .toggle span{
   @apply w-4 h-4 block bg-white rounded-full
+}
+
+/* add-ons */
+.add-on-container > p{
+  @apply my-2 mb-6
+}
+.form-control {
+  @apply flex gap-4 border border-Cool-gray rounded-lg p-4 mb-4 w-full
+}
+.form-control label{
+  @apply flex justify-between items-center w-full
+}
+.form-container label > div > p:first-child{
+  @apply text-Marine-blue font-bold
+}
+.form-control label > p {
+  @apply justify-self-end text-Purplish-blue
 }
