@@ -11,32 +11,53 @@ const Plan = () => {
       <div className="plans-container">
         <label htmlFor="arcade">
           <img src={arcade} aria-hidden="true" />
-          <span className='label-text'>
-            <span className='title'>Arcade</span>
-            <span className='price'>$9/mo</span>
+          <span className="label-text">
+            <span className="title">Arcade</span>
+            <span className="price">$9/mo</span>
           </span>
         </label>
-        <input type="radio" name='plan' id='arcade' />
+        <input type="radio" name="plan" id="arcade" />
 
         <label htmlFor="advanced">
           <img src={advanced} aria-hidden="true" />
-          <span className='label-text'>
-            <span className='title'>Advanced</span>
-            <span className='price'>$12/mo</span>
+          <span className="label-text">
+            <span className="title">Advanced</span>
+            <span className="price">$12/mo</span>
           </span>
         </label>
-        <input type="radio" name='plan' id='advanced' />
-        
+        <input type="radio" name="plan" id="advanced" />
+
         <label htmlFor="pro">
           <img src={pro} aria-hidden="true" />
-          <span className='label-text'>
-            <span className='title'>Pro</span>
-            <span className='price'>$15/mo</span>
+          <span className="label-text">
+            <span className="title">Pro</span>
+            <span className="price">$15/mo</span>
           </span>
         </label>
-        <input type="radio" name='plan' id='pro' />
+        <input type="radio" name="plan" id="pro" />
       </div>
 
+      <div>
+        <label htmlFor="monthly">
+          <span className="label-text">
+            <span className="title">Monthly</span>
+            <span className="price">$12/mo</span>
+          </span>
+        </label>
+        <input type="radio" name="billing" id="monthly" />
+
+        <div className='toggle'>
+          <span></span>
+        </div>
+
+        <label htmlFor="yearly">
+          <span className="label-text">
+            <span className="title">Yearly</span>
+            <span className="price">$12/mo</span>
+          </span>
+        </label>
+        <input type="radio" name="billing" id="yearly" />
+      </div>
     </section>
   )
 }
