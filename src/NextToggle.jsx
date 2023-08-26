@@ -9,7 +9,7 @@ const NextToggle = ({handleNextStep, handlePrevStep, currentStep}) => {
       {currentStep !== 4 ? (
         <a href="#" className='next-btn' onClick={handleNextStep}>Next Step</a>
       ) : (
-        <input type="submit" value="Confirm" />
+        <input type="submit" className='confirm-btn' value="Confirm" />
       )}
     </div>
   )
