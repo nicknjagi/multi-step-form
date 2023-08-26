@@ -3,9 +3,9 @@ import React from 'react'
 const NextToggle = ({handleNextStep, handlePrevStep, currentStep}) => {
   return (
     <div className="next-toggle">
-      <a href="#" className='prev' onClick={handlePrevStep}>
+      {currentStep !== 1 && <a href="#" className='prev' onClick={handlePrevStep}>
         Go Back
-      </a>
+      </a>}
       {currentStep !== 4 ? (
         <a href="#" className='next-btn' onClick={handleNextStep}>Next Step</a>
       ) : (
