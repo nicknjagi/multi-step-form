@@ -3,6 +3,7 @@ import StepTracker from './StepTracker'
 import PersonalInfo from './forms/PersonalInfo'
 import NextToggle from './NextToggle'
 import Plan from './forms/Plan'
+import AddOns from './forms/AddOns'
 
 function App() {
   const [currentStep, setCurrentStep] = useState(1)
@@ -35,6 +36,7 @@ function App() {
         <form onSubmit={handleSubmit} className="form-container">
           {currentStep === 1 && <PersonalInfo />}
           {currentStep === 2 && <Plan />}
+          {currentStep === 3 && <AddOns />}
 
           <NextToggle handleNextStep={handleNextStep} handlePrevStep={handlePrevStep} currentStep={currentStep}/>
         </form>
