@@ -53,7 +53,11 @@ main{
 }
 
 .next-btn{
-  @apply px-4 py-2 text-white rounded-md bg-Marine-blue hover:bg-[hsl(217,70%,33%)]
+  @apply w-24 py-2 text-center text-white rounded-md bg-Marine-blue hover:bg-[hsl(217,70%,33%)]
+}
+
+.confirm-btn{
+  @apply w-24 text-center py-2 text-white rounded-md bg-Purplish-blue hover:bg-Pastel-blue cursor-pointer
 }
 
 .form-container{
