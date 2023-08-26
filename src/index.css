@@ -90,7 +90,7 @@ section {
   @apply grid md:grid-cols-3 gap-3 mt-4 mb-6 md:mt-0 md:mb-8 w-full
 }
 .plans-container label{
-  @apply flex items-start md:flex-col gap-4 md:gap-y-8 p-4 max-w-sm md:max-w-full border border-Light-gray text-Marine-blue font-medium rounded-lg hover:bg-[#f8f9fe]
+  @apply flex items-start md:flex-col gap-4 md:gap-y-8 p-4 max-w-sm md:max-w-full border border-Light-gray text-Marine-blue font-bold rounded-lg hover:bg-[#f8f9fe]
   hover:border-Purplish-blue cursor-pointer
 }
 .plans-container label.active{
@@ -106,7 +106,7 @@ section {
   @apply flex flex-col
 }
 .label-text span:nth-child(2){
-  @apply text-Cool-gray
+  @apply text-Cool-gray font-normal
 }
 .billing-container{
   @apply flex gap-6 justify-center py-4 rounded-lg bg-[#F8F9FE] max-w-sm md:max-w-full
@@ -129,7 +129,7 @@ section {
   @apply my-2 mb-6
 }
 .form-control {
-  @apply flex gap-4 border border-Cool-gray rounded-lg p-4 mb-4 w-full
+  @apply flex gap-4 border border-Cool-gray rounded-lg p-4 mb-4 w-full hover:border-Purplish-blue cursor-pointer
 }
 .form-control label{
   @apply flex justify-between items-center w-full
