@@ -61,7 +61,7 @@ main{
 }
 
 .form-container{
-  @apply relative w-full px-4 lg:px-24
+  @apply md:relative w-full px-4 lg:px-24
 }
 
 /* personal info form */
