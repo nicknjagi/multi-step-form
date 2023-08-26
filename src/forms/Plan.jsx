@@ -9,11 +9,13 @@ const Plan = () => {
       <h2>Select your plan</h2>
       <p>You have the option of monthly or yearly billing.</p>
       <div className="plans-container">
-        <label htmlFor="arcade">
+
+        <label className='active' htmlFor="arcade">
           <img src={arcade} aria-hidden="true" />
           <span className="label-text">
             <span className="title">Arcade</span>
             <span className="price">$9/mo</span>
+            {/* <span>2 months free</span> */}
           </span>
         </label>
         <input type="radio" name="plan" id="arcade" />
@@ -23,6 +25,7 @@ const Plan = () => {
           <span className="label-text">
             <span className="title">Advanced</span>
             <span className="price">$12/mo</span>
+            {/* <span>2 months free</span> */}
           </span>
         </label>
         <input type="radio" name="plan" id="advanced" />
@@ -32,30 +35,21 @@ const Plan = () => {
           <span className="label-text">
             <span className="title">Pro</span>
             <span className="price">$15/mo</span>
+            {/* <span>2 months free</span> */}
           </span>
         </label>
         <input type="radio" name="plan" id="pro" />
       </div>
 
       <div>
-        <label htmlFor="monthly">
-          <span className="label-text">
-            <span className="title">Monthly</span>
-            <span className="price">$12/mo</span>
-          </span>
-        </label>
+        <label htmlFor="monthly">Monthly</label>
         <input type="radio" name="billing" id="monthly" />
 
         <div className='toggle'>
           <span></span>
         </div>
 
-        <label htmlFor="yearly">
-          <span className="label-text">
-            <span className="title">Yearly</span>
-            <span className="price">$12/mo</span>
-          </span>
-        </label>
+        <label htmlFor="yearly">Yearly</label>
         <input type="radio" name="billing" id="yearly" />
       </div>
     </section>
