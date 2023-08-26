@@ -41,11 +41,11 @@ h2{
 }
 
 main{
-  @apply w-full max-w-[940px] h-auto md:h-[600px] mx-auto md:flex md:bg-white md:rounded-md
+  @apply w-full md:w-[740px] lg:w-[960px] h-auto md:h-[600px] mx-auto md:flex md:bg-white md:rounded-md
 }
 
 .next-toggle{
-  @apply flex items-center justify-between px-5 py-6 w-full bg-white absolute bottom-0 left-0 
+  @apply flex items-center justify-between px-9 xl:px-14 py-6 w-full bg-white absolute bottom-0 left-0 
 }
 
 .prev{
@@ -61,7 +61,7 @@ main{
 }
 
 .form-container{
-  @apply md:relative w-full px-4 lg:px-24
+  @apply md:relative w-full px-4 xl:px-10
 }
 
 /* personal info form */
@@ -87,7 +87,7 @@ main{
 
 /* plan */
 .plans-container {
-  @apply grid md:grid-cols-3 gap-3 mt-4 mb-6 md:mt-0 md:mb-8
+  @apply grid md:grid-cols-3 gap-3 mt-4 mb-6 md:mt-0 md:mb-8 w-full
 }
 .plans-container label{
   @apply flex items-start md:flex-col gap-4 md:gap-y-8 p-4 max-w-sm md:max-w-full border border-Light-gray text-Marine-blue font-medium rounded-lg hover:bg-[#f8f9fe]
