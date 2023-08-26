@@ -45,7 +45,7 @@ main{
 }
 
 .next-toggle{
-  @apply flex items-center justify-between px-5 py-6 w-full bg-white absolute bottom-0 md:bottom-auto md:left-auto left-0 md:relative
+  @apply flex items-center justify-between px-5 py-6 w-full bg-white absolute bottom-0 left-0 
 }
 
 .prev{
@@ -61,7 +61,7 @@ main{
 }
 
 .form-container{
-  @apply w-full px-4 lg:px-24
+  @apply relative w-full px-4 lg:px-24
 }
 
 /* personal info form */
@@ -90,7 +90,8 @@ main{
   @apply grid md:grid-cols-3 gap-3 mt-4 mb-6 md:mt-0 md:mb-8
 }
 .plans-container label{
-  @apply flex items-start md:flex-col gap-4 p-4 max-w-sm md:max-w-full border border-Light-gray text-Marine-blue font-medium rounded-lg
+  @apply flex items-start md:flex-col gap-4 md:gap-y-8 p-4 max-w-sm md:max-w-full border border-Light-gray text-Marine-blue font-medium rounded-lg hover:bg-[#f8f9fe]
+  hover:border-Purplish-blue cursor-pointer
 }
 .plans-container label.active{
   @apply border-Purplish-blue bg-[#F8F9FE]
@@ -114,7 +115,7 @@ main{
   @apply text-Marine-blue
 }
 .toggle{
-  @apply flex items-center px-1 w-12 h-6 bg-Marine-blue rounded-2xl transition ease-out
+  @apply flex items-center px-1 w-12 h-6 bg-Marine-blue rounded-2xl transition ease-out cursor-pointer
 }
 .yearly .toggle{
   @apply justify-end
