@@ -131,6 +131,9 @@ section {
 .form-control {
   @apply flex gap-4 border border-Cool-gray rounded-lg p-4 mb-4 w-full hover:border-Purplish-blue cursor-pointer
 }
+.form-control.active{
+  @apply bg-[#F8F9FE]
+}
 .form-control label{
   @apply flex justify-between items-center w-full
 }
@@ -139,4 +142,19 @@ section {
 }
 .form-control label > p {
   @apply justify-self-end text-Purplish-blue
+}
+.form-control input[type="checkbox"]{
+  @apply appearance-none mx-0 my-auto p-[0.6em] text-inherit w-[1.15em] h-[1.15em] border-[0.15em] rounded-md grid place-content-center 
+}
+.form-control input[type="checkbox"]:checked{
+  @apply bg-Purplish-blue
+}
+.form-control input[type="checkbox"]::before{
+  @apply content-[''] w-[0.65em] h-[0.65em] scale-0 transition-transform ease-in-out origin-bottom-left shadow-sm shadow-Light-gray
+}
+.form-control input[type="checkbox"]::before{
+  clip-path: polygon(14% 44%, 0 65%, 50% 100%, 100% 16%, 80% 0%, 43% 62%);
+}
+.form-control input[type="checkbox"]:checked::before{
+  @apply scale-100 bg-white
 }
