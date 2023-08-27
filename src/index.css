@@ -66,7 +66,7 @@ main{
 
 /* personal info form */
 section {
-  @apply text-Cool-gray flex flex-col bg-white mx-4 md:w-[540px] md:mx-auto px-5 py-8 md:py-12 rounded-lg -translate-y-[5.2rem] md:translate-y-0
+  @apply text-Cool-gray flex flex-col bg-white mx-3 md:w-[500px] md:mx-auto px-4 sm:px-5 py-8 md:py-12 rounded-lg -translate-y-[5.2rem] md:translate-y-0
 }
 
 .personal-info p, .plan p {
@@ -129,7 +129,7 @@ section {
   @apply my-2 mb-6
 }
 .form-control {
-  @apply flex gap-4 border border-Cool-gray rounded-lg p-4 mb-4 w-full hover:border-Purplish-blue cursor-pointer
+  @apply flex gap-3 md:gap-4 border border-Cool-gray rounded-lg px-3 py-3 mb-4 w-full hover:border-Purplish-blue cursor-pointer
 }
 .form-control.active{
   @apply bg-[#F8F9FE]
@@ -144,7 +144,7 @@ section {
   @apply justify-self-end text-Purplish-blue
 }
 .form-control input[type="checkbox"]{
-  @apply appearance-none mx-0 my-auto p-[0.6em] text-inherit w-[1.15em] h-[1.15em] border-[0.15em] rounded-md grid place-content-center 
+  @apply appearance-none mx-0 my-auto p-[0.6em] text-xs md:text-base w-[1em] h-[1em] border-[0.15em] rounded-md grid place-content-center 
 }
 .form-control input[type="checkbox"]:checked{
   @apply bg-Purplish-blue
@@ -157,4 +157,36 @@ section {
 }
 .form-control input[type="checkbox"]:checked::before{
   @apply scale-100 bg-white
+}
+
+/* summary */
+.summary{
+  @apply my-6 py-4 bg-[#F8F9FE] flex flex-col gap-4 rounded-md
+}
+.plan-summary, .add-on-summary{
+  @apply  px-6 flex justify-between items-center
+}
+.plan-summary{
+  @apply text-Marine-blue font-bold 
+}
+.plan-summary button{
+  @apply font-normal text-Cool-gray underline hover:text-Purplish-blue 
+}
+.add-ons{
+  @apply rounded-b-md
+}
+.add-on-summary{
+  @apply pb-2 
+}
+.add-on-summary p:nth-child(2){
+  @apply text-Marine-blue font-medium
+}
+.summary-container hr{
+  @apply  mx-4 bg-Light-gray
+}
+.total-container{
+  @apply bg-white mx-6 flex justify-between
+}
+.total-container p:nth-child(2){
+  @apply text-Purplish-blue font-bold
 }
