@@ -16,9 +16,9 @@ const AddOns = () => {
         </label>
       </div>
 
-      <div className="form-control">
-        <input type="checkbox" name="add-ons" id="larger storage" />
-        <label htmlFor="larger storage">
+      <div className="form-control active">
+        <input type="checkbox" name="add-ons" id="larger-storage" />
+        <label htmlFor="larger-storage">
           <div>
             <p>Larger storage</p>
             <p>Extra 1TB of cloud save</p>
