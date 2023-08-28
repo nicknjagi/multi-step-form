@@ -8,13 +8,22 @@ import Summary from './forms/Summary'
 
 function App() {
   const [currentStep, setCurrentStep] = useState(1)
+  const [user, setUser] = useState({
+    name:'',
+    email:'',
+    number:''
+  })
+
+  const handleChange = (e) => {
+    setUser({...user, [e.target.name]:e.target.value})
+  }
+
 
   const handleNextStep = () => {
     if(currentStep === 4){
       return
     }
     setCurrentStep((curr)=>curr + 1)
-    console.log(currentStep);
   }
 
   const handlePrevStep = () => {
@@ -22,7 +31,6 @@ function App() {
       return
     }
     setCurrentStep((curr)=>curr - 1)
-    console.log(currentStep);
   }
 
   const handleSubmit = (e) => {
@@ -35,7 +43,7 @@ function App() {
       <main>
         <StepTracker currentStep={currentStep}/>
         <form onSubmit={handleSubmit} className="form-container">
-          {currentStep === 1 && <PersonalInfo />}
+          {currentStep === 1 && <PersonalInfo handleChange={handleChange} />}
           {currentStep === 2 && <Plan />}
           {currentStep === 3 && <AddOns />}
           {currentStep === 4 && <Summary setCurrentStep={setCurrentStep}/>}
