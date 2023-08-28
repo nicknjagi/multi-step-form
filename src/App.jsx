@@ -11,14 +11,10 @@ function App() {
   const [user, setUser] = useState({
     name:'',
     email:'',
-    number:''
+    number:'',
+    plan:'arcade',
+    billing:'monthly'
   })
-
-  const handleChange = (e) => {
-    setUser({...user, [e.target.name]:e.target.value})
-    console.log(user);
-  }
-
 
   const handleNextStep = () => {
     if(currentStep === 4){
@@ -44,7 +40,7 @@ function App() {
       <main>
         <StepTracker currentStep={currentStep}/>
         <form onSubmit={handleSubmit} className="form-container">
-          {currentStep === 1 && <PersonalInfo handleChange={handleChange} user={user}/>}
+          {currentStep === 1 && <PersonalInfo setUser={setUser} user={user}/>}
           {currentStep === 2 && <Plan user={user} setUser={setUser}/>}
           {currentStep === 3 && <AddOns />}
           {currentStep === 4 && <Summary setCurrentStep={setCurrentStep}/>}
