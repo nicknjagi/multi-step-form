@@ -45,7 +45,7 @@ function App() {
         <StepTracker currentStep={currentStep}/>
         <form onSubmit={handleSubmit} className="form-container">
           {currentStep === 1 && <PersonalInfo handleChange={handleChange} user={user}/>}
-          {currentStep === 2 && <Plan />}
+          {currentStep === 2 && <Plan user={user} setUser={setUser}/>}
           {currentStep === 3 && <AddOns />}
           {currentStep === 4 && <Summary setCurrentStep={setCurrentStep}/>}
 
