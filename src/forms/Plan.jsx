@@ -7,6 +7,16 @@ const Plan = ({user,setUser}) => {
 
   const handleRadioInput = (e) => {
     setUser({...user,[e.target.name]:e.target.id})
+    console.log(user);
+  }
+
+  const handleToggleClick = () => {
+    if(user.billing === 'monthly'){
+      setUser({...user, billing:'yearly'})
+    }
+    else{
+      setUser({...user, billing:'monthly'})
+    }
   }
 
   return (
@@ -14,7 +24,9 @@ const Plan = ({user,setUser}) => {
       <h2>Select your plan</h2>
       <p>You have the option of monthly or yearly billing.</p>
       <div className="plans-container">
-        <label className={user.plan === 'arcade' && 'active'} htmlFor="arcade">
+        <label
+          className={user.plan === 'arcade' ? 'active' : ''}
+          htmlFor="arcade">
           <img src={arcade} aria-hidden="true" />
           <span className="label-text">
             <span className="title">Arcade</span>
@@ -30,7 +42,7 @@ const Plan = ({user,setUser}) => {
         />
 
         <label
-          className={user.plan === 'advanced' && 'active'}
+          className={user.plan === 'advanced' ? 'active' : ''}
           htmlFor="advanced">
           <img src={advanced} aria-hidden="true" />
           <span className="label-text">
@@ -46,7 +58,7 @@ const Plan = ({user,setUser}) => {
           onChange={handleRadioInput}
         />
 
-        <label className={user.plan === 'pro' && 'active'} htmlFor="pro">
+        <label className={user.plan === 'pro' ? 'active' : ''} htmlFor="pro">
           <img src={pro} aria-hidden="true" />
           <span className="label-text">
             <span className="title">Pro</span>
@@ -58,17 +70,38 @@ const Plan = ({user,setUser}) => {
       </div>
 
       <div className="billing-container">
-        <label className="active" htmlFor="monthly">
+        <label
+          className={user.billing === 'monthly' ? 'active' : ''}
+          htmlFor="monthly">
           Monthly
         </label>
-        <input type="radio" name="billing" id="monthly" />
+        <input
+          type="radio"
+          name="billing"
+          id="monthly"
+          checked={user.billing === 'monthly'}
+          onChange={handleRadioInput}
+        />
 
-        <div className="toggle">
+        <button
+          type="button"
+          className={user.billing === 'monthly' ? 'toggle' : 'toggle yearly'}
+          onClick={handleToggleClick}>
           <span></span>
-        </div>
+        </button>
 
-        <label htmlFor="yearly">Yearly</label>
-        <input type="radio" name="billing" id="yearly" />
+        <label
+          className={user.billing === 'yearly' ? 'active' : ''}
+          htmlFor="yearly">
+          Yearly
+        </label>
+        <input
+          type="radio"
+          name="billing"
+          id="yearly"
+          checked={user.billing === 'yearly'}
+          onChange={handleRadioInput}
+        />
       </div>
     </section>
   )
