@@ -22,6 +22,7 @@ const PersonalInfo = ({handleChange,user}) => {
         type="email"
         name="email"
         id="email"
+        value={user.email}
         placeholder="e.g stephenking@lorem.com"
       />
       <label htmlFor="phone">Phone Number</label>
@@ -29,6 +30,7 @@ const PersonalInfo = ({handleChange,user}) => {
         onChange={handleChange}
         type="number"
         name="number"
+        value={user.number}
         placeholder="e.g. +1 234 567 890"
       />
     </section>
