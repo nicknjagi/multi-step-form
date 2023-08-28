@@ -16,6 +16,7 @@ function App() {
 
   const handleChange = (e) => {
     setUser({...user, [e.target.name]:e.target.value})
+    console.log(user);
   }
 
 
@@ -43,7 +44,7 @@ function App() {
       <main>
         <StepTracker currentStep={currentStep}/>
         <form onSubmit={handleSubmit} className="form-container">
-          {currentStep === 1 && <PersonalInfo handleChange={handleChange} />}
+          {currentStep === 1 && <PersonalInfo handleChange={handleChange} user={user}/>}
           {currentStep === 2 && <Plan />}
           {currentStep === 3 && <AddOns />}
           {currentStep === 4 && <Summary setCurrentStep={setCurrentStep}/>}
