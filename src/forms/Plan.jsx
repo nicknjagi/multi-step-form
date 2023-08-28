@@ -3,14 +3,18 @@ import arcade from '../assets/images/icon-arcade.svg'
 import advanced from '../assets/images/icon-advanced.svg'
 import pro from '../assets/images/icon-pro.svg'
 
-const Plan = () => {
+const Plan = ({user,setUser}) => {
+
+  const handleRadioInput = (e) => {
+    setUser({...user,[e.target.name]:e.target.id})
+  }
+
   return (
     <section className="plan">
       <h2>Select your plan</h2>
       <p>You have the option of monthly or yearly billing.</p>
       <div className="plans-container">
-
-        <label className='active' htmlFor="arcade">
+        <label className={user.plan === 'arcade' && 'active'} htmlFor="arcade">
           <img src={arcade} aria-hidden="true" />
           <span className="label-text">
             <span className="title">Arcade</span>
@@ -18,9 +22,16 @@ const Plan = () => {
             {/* <span>2 months free</span> */}
           </span>
         </label>
-        <input type="radio" name="plan" id="arcade" />
+        <input
+          type="radio"
+          name="plan"
+          id="arcade"
+          onChange={handleRadioInput}
+        />
 
-        <label htmlFor="advanced">
+        <label
+          className={user.plan === 'advanced' && 'active'}
+          htmlFor="advanced">
           <img src={advanced} aria-hidden="true" />
           <span className="label-text">
             <span className="title">Advanced</span>
@@ -28,9 +39,14 @@ const Plan = () => {
             {/* <span>2 months free</span> */}
           </span>
         </label>
-        <input type="radio" name="plan" id="advanced" />
+        <input
+          type="radio"
+          name="plan"
+          id="advanced"
+          onChange={handleRadioInput}
+        />
 
-        <label htmlFor="pro">
+        <label className={user.plan === 'pro' && 'active'} htmlFor="pro">
           <img src={pro} aria-hidden="true" />
           <span className="label-text">
             <span className="title">Pro</span>
@@ -38,14 +54,16 @@ const Plan = () => {
             {/* <span>2 months free</span> */}
           </span>
         </label>
-        <input type="radio" name="plan" id="pro" />
+        <input type="radio" name="plan" id="pro" onChange={handleRadioInput} />
       </div>
 
-      <div className='billing-container'>
-        <label className='active' htmlFor="monthly">Monthly</label>
+      <div className="billing-container">
+        <label className="active" htmlFor="monthly">
+          Monthly
+        </label>
         <input type="radio" name="billing" id="monthly" />
 
-        <div className='toggle'>
+        <div className="toggle">
           <span></span>
         </div>
 
