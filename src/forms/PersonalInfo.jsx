@@ -1,6 +1,6 @@
 import React from 'react'
 
-const PersonalInfo = ({handleChange}) => {
+const PersonalInfo = ({handleChange,user}) => {
   
   
   return (
@@ -9,15 +9,16 @@ const PersonalInfo = ({handleChange}) => {
       <p>Please provide your name, email address, and phone number.</p>
       <label htmlFor="name">Name</label>
       <input
-        onChange={(e) => handleChange(e)}
+        onChange={handleChange}
         type="text"
         id="name"
         name="name"
+        value={user.name}
         placeholder="e.g. Stephen King"
       />
       <label htmlFor="email">Email Address</label>
       <input
-        onChange={(e) => handleChange(e)}
+        onChange={handleChange}
         type="email"
         name="email"
         id="email"
@@ -25,7 +26,7 @@ const PersonalInfo = ({handleChange}) => {
       />
       <label htmlFor="phone">Phone Number</label>
       <input
-        onChange={(e) => handleChange(e)}
+        onChange={handleChange}
         type="number"
         name="number"
         placeholder="e.g. +1 234 567 890"
