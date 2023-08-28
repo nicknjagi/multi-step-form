@@ -111,14 +111,17 @@ section {
 .billing-container{
   @apply flex gap-6 justify-center py-4 rounded-lg bg-[#F8F9FE] max-w-sm md:max-w-full
 }
+.billing-container label{
+  @apply font-medium
+}
 .billing-container label.active{
-  @apply text-Marine-blue
+  @apply text-Marine-blue 
 }
 .toggle{
-  @apply flex items-center px-1 w-12 h-6 bg-Marine-blue rounded-2xl transition ease-out cursor-pointer
+  @apply flex items-center px-1 w-12 h-6 bg-Marine-blue rounded-2xl cursor-pointer
 }
-.yearly .toggle{
-  @apply justify-end
+.toggle.yearly{
+  @apply justify-end 
 }
 .toggle span{
   @apply w-4 h-4 block bg-white rounded-full
@@ -132,7 +135,7 @@ section {
   @apply flex gap-3 md:gap-4 border border-Cool-gray rounded-lg px-3 py-3 mb-4 w-full hover:border-Purplish-blue cursor-pointer
 }
 .form-control.active{
-  @apply bg-[#F8F9FE]
+  @apply bg-[#F8F9FE] border-Purplish-blue
 }
 .form-control label{
   @apply flex justify-between items-center w-full
