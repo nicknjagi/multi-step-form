@@ -1,7 +1,10 @@
 import React from 'react'
 
-const PersonalInfo = ({handleChange,user}) => {
+const PersonalInfo = ({setUser,user}) => {
   
+  const handleChange = (e) => {
+    setUser({ ...user, [e.target.name]: e.target.value })
+  }
   
   return (
     <section className="personal-info">
