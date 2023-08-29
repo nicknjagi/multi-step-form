@@ -7,11 +7,20 @@ const AddOns = ({user,setUser}) => {
   }
 
   return (
-    <section className='add-on-container'>
+    <section className="add-on-container">
       <h2>Pick add-ons</h2>
       <p>Add-ons help enhance your gaming experience.</p>
-      <div className={user['online-service'] ? "form-control active" : 'form-control'}>
-        <input type="checkbox" name="online-service" id="online-service" onChange={handleChange}/>
+      <div
+        className={
+          user['online-service'] ? 'form-control active' : 'form-control'
+        }>
+        <input
+          type="checkbox"
+          name="online-service"
+          id="online-service"
+          onChange={handleChange}
+          checked={user['online-service']}
+        />
         <label htmlFor="online-service">
           <div>
             <p>Online service</p>
@@ -21,8 +30,17 @@ const AddOns = ({user,setUser}) => {
         </label>
       </div>
 
-      <div className={user['larger-storage'] ? "form-control active" : 'form-control'}>
-        <input type="checkbox" name="larger-storage" id="larger-storage" onChange={handleChange}/>
+      <div
+        className={
+          user['larger-storage'] ? 'form-control active' : 'form-control'
+        }>
+        <input
+          type="checkbox"
+          name="larger-storage"
+          id="larger-storage"
+          onChange={handleChange}
+          checked={user['larger-storage']}
+        />
         <label htmlFor="larger-storage">
           <div>
             <p>Larger storage</p>
@@ -32,8 +50,17 @@ const AddOns = ({user,setUser}) => {
         </label>
       </div>
 
-      <div className={user['customizable-profile'] ? "form-control active" : 'form-control'}>
-        <input type="checkbox" name="customizable-profile" id="customizable-profile" onChange={handleChange}/>
+      <div
+        className={
+          user['customizable-profile'] ? 'form-control active' : 'form-control'
+        }>
+        <input
+          type="checkbox"
+          name="customizable-profile"
+          id="customizable-profile"
+          onChange={handleChange}
+          checked={user['customizable-profile']}
+        />
         <label htmlFor="customizable-profile">
           <div>
             <p>Customizable profile</p>
