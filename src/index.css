@@ -166,6 +166,9 @@ section {
 .summary{
   @apply my-6 py-4 bg-[#F8F9FE] flex flex-col gap-4 rounded-md
 }
+.plan-summary h3 > span{
+  @apply capitalize
+}
 .plan-summary, .add-on-summary{
   @apply  px-6 flex justify-between items-center
 }
