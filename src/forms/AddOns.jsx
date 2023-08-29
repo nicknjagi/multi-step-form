@@ -1,12 +1,17 @@
 import React from 'react'
 
-const AddOns = () => {
+const AddOns = ({user,setUser}) => {
+
+  const handleChange = (e) => {
+    setUser({...user,[e.target.name]:e.target.checked})
+  }
+
   return (
     <section className='add-on-container'>
       <h2>Pick add-ons</h2>
       <p>Add-ons help enhance your gaming experience.</p>
-      <div className="form-control">
-        <input type="checkbox" name="add-ons" id="online-service" />
+      <div className={user['online-service'] ? "form-control active" : 'form-control'}>
+        <input type="checkbox" name="online-service" id="online-service" onChange={handleChange}/>
         <label htmlFor="online-service">
           <div>
             <p>Online service</p>
@@ -16,8 +21,8 @@ const AddOns = () => {
         </label>
       </div>
 
-      <div className="form-control active">
-        <input type="checkbox" name="add-ons" id="larger-storage" />
+      <div className={user['larger-storage'] ? "form-control active" : 'form-control'}>
+        <input type="checkbox" name="larger-storage" id="larger-storage" onChange={handleChange}/>
         <label htmlFor="larger-storage">
           <div>
             <p>Larger storage</p>
@@ -27,9 +32,9 @@ const AddOns = () => {
         </label>
       </div>
 
-      <div className="form-control">
-        <input type="checkbox" name="add-ons" id="customizable" />
-        <label htmlFor="customizable">
+      <div className={user['customizable-profile'] ? "form-control active" : 'form-control'}>
+        <input type="checkbox" name="customizable-profile" id="customizable-profile" onChange={handleChange}/>
+        <label htmlFor="customizable-profile">
           <div>
             <p>Customizable profile</p>
             <p>Custom theme on your profile</p>
