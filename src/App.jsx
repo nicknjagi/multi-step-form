@@ -46,7 +46,7 @@ function App() {
           {currentStep === 1 && <PersonalInfo setUser={setUser} user={user} />}
           {currentStep === 2 && <Plan user={user} setUser={setUser} />}
           {currentStep === 3 && <AddOns user={user} setUser={setUser} />}
-          {currentStep === 4 && <Summary setCurrentStep={setCurrentStep} />}
+          {currentStep === 4 && <Summary user={user} setCurrentStep={setCurrentStep} />}
 
           <NextToggle
             handleNextStep={handleNextStep}
