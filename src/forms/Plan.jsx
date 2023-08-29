@@ -7,7 +7,6 @@ const Plan = ({user,setUser}) => {
 
   const handleRadioInput = (e) => {
     setUser({...user,[e.target.name]:e.target.id})
-    console.log(user);
   }
 
   const handleToggleClick = () => {
