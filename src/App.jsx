@@ -13,7 +13,10 @@ function App() {
     email:'',
     number:'',
     plan:'arcade',
-    billing:'monthly'
+    billing:'monthly',
+    'online-service':false,
+    'larger-storage':false,
+    'customizable-profile':false,
   })
 
   const handleNextStep = () => {
@@ -38,14 +41,18 @@ function App() {
   return (
     <>
       <main>
-        <StepTracker currentStep={currentStep}/>
+        <StepTracker currentStep={currentStep} />
         <form onSubmit={handleSubmit} className="form-container">
-          {currentStep === 1 && <PersonalInfo setUser={setUser} user={user}/>}
-          {currentStep === 2 && <Plan user={user} setUser={setUser}/>}
-          {currentStep === 3 && <AddOns />}
-          {currentStep === 4 && <Summary setCurrentStep={setCurrentStep}/>}
+          {currentStep === 1 && <PersonalInfo setUser={setUser} user={user} />}
+          {currentStep === 2 && <Plan user={user} setUser={setUser} />}
+          {currentStep === 3 && <AddOns user={user} setUser={setUser} />}
+          {currentStep === 4 && <Summary setCurrentStep={setCurrentStep} />}
 
-          <NextToggle handleNextStep={handleNextStep} handlePrevStep={handlePrevStep} currentStep={currentStep}/>
+          <NextToggle
+            handleNextStep={handleNextStep}
+            handlePrevStep={handlePrevStep}
+            currentStep={currentStep}
+          />
         </form>
       </main>
     </>
