@@ -25,7 +25,10 @@ const StepTracker = ({currentStep}) => {
         </div>
       </div>
       <div className="step">
-        <button className={currentStep === 4 ? 'active' : ''}>4</button>
+        <button
+          className={currentStep === 4 || currentStep === 5 ? 'active' : ''}>
+          4
+        </button>
         <div className="step-label-container">
           <span>STEP 4</span>
           <h3>SUMMARY</h3>
