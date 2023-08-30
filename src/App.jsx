@@ -5,6 +5,7 @@ import NextToggle from './NextToggle'
 import Plan from './forms/Plan'
 import AddOns from './forms/AddOns'
 import Summary from './forms/Summary'
+import Thanks from './Thanks'
 
 function App() {
   const [currentStep, setCurrentStep] = useState(1)
@@ -19,20 +20,6 @@ function App() {
     'customizable-profile':false,
   })
 
-  const handleNextStep = () => {
-    if(currentStep === 4){
-      return
-    }
-    setCurrentStep((curr)=>curr + 1)
-  }
-
-  const handlePrevStep = () => {
-    if(currentStep === 1){
-      return
-    }
-    setCurrentStep((curr)=>curr - 1)
-  }
-
   const handleSubmit = (e) => {
     e.preventDefault()
     console.log('form submitted!');
@@ -42,18 +29,18 @@ function App() {
     <>
       <main>
         <StepTracker currentStep={currentStep} />
-        <form onSubmit={handleSubmit} className="form-container">
+        {currentStep !== 5 ? <form onSubmit={handleSubmit} className="form-container">
           {currentStep === 1 && <PersonalInfo setUser={setUser} user={user} />}
           {currentStep === 2 && <Plan user={user} setUser={setUser} />}
           {currentStep === 3 && <AddOns user={user} setUser={setUser} />}
           {currentStep === 4 && <Summary user={user} setCurrentStep={setCurrentStep} />}
 
           <NextToggle
-            handleNextStep={handleNextStep}
-            handlePrevStep={handlePrevStep}
+            setCurrentStep={setCurrentStep}
             currentStep={currentStep}
-          />
-        </form>
+            />
+        </form> : null}
+        {currentStep === 5 && <Thanks />}
       </main>
     </>
   )
