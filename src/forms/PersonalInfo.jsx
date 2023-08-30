@@ -28,11 +28,12 @@ const PersonalInfo = ({setUser,user}) => {
         value={user.email}
         placeholder="e.g stephenking@lorem.com"
       />
-      <label htmlFor="phone">Phone Number</label>
+      <label htmlFor="number">Phone Number</label>
       <input
         onChange={handleChange}
         type="number"
         name="number"
+        id='number'
         value={user.number}
         placeholder="e.g. +1 234 567 890"
       />
