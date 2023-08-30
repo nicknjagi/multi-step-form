@@ -204,3 +204,6 @@ section {
 .thanks-container img{
   @apply w-14 mb-3
 }
+.thanks-container p{
+  @apply max-w-[600px] md:max-w-none
+}
