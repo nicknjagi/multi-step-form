@@ -10,7 +10,7 @@ const PersonalInfo = ({setUser,user,nameError, emailError,numberError}) => {
     <section className="personal-info">
       <h2>Personal info</h2>
       <p>Please provide your name, email address, and phone number.</p>
-      <label htmlFor="name"><span>Name</span><span className='error'>This field is required</span></label>
+      <label htmlFor="name"><span>Name</span><span className={nameError ? 'error' : 'error-hidden'}>This field is required</span></label>
       <input
         onChange={handleChange}
         type="text"
@@ -20,7 +20,7 @@ const PersonalInfo = ({setUser,user,nameError, emailError,numberError}) => {
         value={user.name}
         placeholder="e.g. Stephen King"
       />
-      <label htmlFor="email">Email Address</label>
+      <label htmlFor="email"><span>Email Address</span><span className={emailError ? 'error' : 'error-hidden'}>This field is required</span></label>
       <input
         onChange={handleChange}
         type="email"
@@ -30,7 +30,7 @@ const PersonalInfo = ({setUser,user,nameError, emailError,numberError}) => {
         value={user.email}
         placeholder="e.g stephenking@lorem.com"
       />
-      <label htmlFor="number">Phone Number</label>
+      <label htmlFor="number"><span>Phone Number</span><span className={numberError ? 'error' : 'error-hidden'}>This field is required</span></label>
       <input
         onChange={handleChange}
         type="number"
