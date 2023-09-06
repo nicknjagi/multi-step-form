@@ -74,7 +74,15 @@ section {
 }
 
 .personal-info label {
-  @apply text-Marine-blue font-medium mb-1
+  @apply flex justify-between text-Marine-blue font-medium mb-1
+}
+
+.error{
+  @apply text-Strawberry-red
+}
+
+.error-hidden{
+  @apply hidden
 }
 
 .personal-info input {
