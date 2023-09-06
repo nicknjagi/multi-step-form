@@ -78,11 +78,19 @@ section {
 }
 
 .personal-info input {
-  @apply py-2 px-4 border border-Light-gray focus:border-Purplish-blue rounded-md mb-3 md:mb-5 outline-none cursor-pointer
+  @apply py-2 px-4 rounded-md mb-3 md:mb-5 outline-none cursor-pointer
+}
+
+.input{
+  @apply border border-Light-gray focus:border-Purplish-blue
 }
 
 .personal-info input[type='number']::-webkit-inner-spin-button{
   @apply appearance-none m-0
+}
+
+.input-error {
+  @apply border border-Strawberry-red
 }
 
 /* plan */
