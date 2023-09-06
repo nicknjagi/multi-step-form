@@ -51,6 +51,7 @@ function App() {
 
             <NextToggle
               user={user}
+              emailError={emailError}
               setNameError={setNameError}
               setEmailError={setEmailError}
               setNumberError={setNumberError}
