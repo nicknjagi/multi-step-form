@@ -19,6 +19,9 @@ function App() {
     'larger-storage':false,
     'customizable-profile':false,
   })
+  const [nameError, setNameError] = useState(false)
+  const [emailError, setEmailError] = useState(false)
+  const [numberError, setNumberError] = useState(false)
 
   const handleSubmit = (e) => {
     e.preventDefault()
@@ -29,17 +32,33 @@ function App() {
     <>
       <main>
         <StepTracker currentStep={currentStep} />
-        {currentStep !== 5 ? <form onSubmit={handleSubmit} className="form-container">
-          {currentStep === 1 && <PersonalInfo setUser={setUser} user={user} />}
-          {currentStep === 2 && <Plan user={user} setUser={setUser} />}
-          {currentStep === 3 && <AddOns user={user} setUser={setUser} />}
-          {currentStep === 4 && <Summary user={user} setCurrentStep={setCurrentStep} />}
+        {currentStep !== 5 ? (
+          <form onSubmit={handleSubmit} className="form-container">
+            {currentStep === 1 && (
+              <PersonalInfo
+                setUser={setUser}
+                user={user}
+                nameError={nameError}
+                emailError={emailError}
+                numberError={numberError}
+              />
+            )}
+            {currentStep === 2 && <Plan user={user} setUser={setUser} />}
+            {currentStep === 3 && <AddOns user={user} setUser={setUser} />}
+            {currentStep === 4 && (
+              <Summary user={user} setCurrentStep={setCurrentStep} />
+            )}
 
-          <NextToggle
-            setCurrentStep={setCurrentStep}
-            currentStep={currentStep}
+            <NextToggle
+              user={user}
+              setNameError={setNameError}
+              setEmailError={setEmailError}
+              setNumberError={setNumberError}
+              setCurrentStep={setCurrentStep}
+              currentStep={currentStep}
             />
-        </form> : null}
+          </form>
+        ) : null}
         {currentStep === 5 && <Thanks />}
       </main>
     </>
