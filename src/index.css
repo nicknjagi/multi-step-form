@@ -86,7 +86,7 @@ section {
 }
 
 .personal-info input {
-  @apply py-2 px-4 rounded-md mb-3 md:mb-5 outline-none cursor-pointer
+  @apply py-2 px-4 rounded-md mb-5 outline-none cursor-pointer
 }
 
 .input{
