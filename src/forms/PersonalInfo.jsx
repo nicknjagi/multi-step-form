@@ -1,6 +1,6 @@
 import React from 'react'
 
-const PersonalInfo = ({setUser,user}) => {
+const PersonalInfo = ({setUser,user,nameError, emailError,numberError}) => {
   
   const handleChange = (e) => {
     setUser({ ...user, [e.target.name]: e.target.value })
