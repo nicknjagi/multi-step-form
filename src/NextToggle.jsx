@@ -1,8 +1,21 @@
-import React from 'react'
+import {useState} from 'react'
 
-const NextToggle = ({setCurrentStep, currentStep}) => {
+const NextToggle = ({user,setCurrentStep, currentStep,setNameError,setEmailError,setNumberError}) => {
+
+  const checkErrors = () => {
+    user.name.trim() !== '' ? setNameError(false) : setNameError(true)
+    user.email.trim() !== '' ? setEmailError(false) : setEmailError(true)
+    user.number.trim() !== '' ? setNumberError(false) : setNumberError(true)
+    if(user.name.trim() !== '' && user.email.trim() !== '' && user.number.trim() !== ''){
+      setCurrentStep(curr => curr + 1)
+    }
+  }
 
   const handleNextStep = () => {
+    if(currentStep === 1){
+      checkErrors()
+      return
+    }
     if(currentStep === 5){
       return
     }
