@@ -1,14 +1,24 @@
-import {useState} from 'react'
-
-const NextToggle = ({user,setCurrentStep, currentStep,setNameError,setEmailError,setNumberError}) => {
+const NextToggle = ({user,setCurrentStep, currentStep,setNameError,setEmailError,emailError,setNumberError}) => {
 
   const checkErrors = () => {
     user.name.trim() !== '' ? setNameError(false) : setNameError(true)
-    user.email.trim() !== '' ? setEmailError(false) : setEmailError(true)
+    user.email.trim() !== '' ? checkEmail() : setEmailError(true)
     user.number.trim() !== '' ? setNumberError(false) : setNumberError(true)
-    if(user.name.trim() !== '' && user.email.trim() !== '' && user.number.trim() !== ''){
+    if(user.name.trim() !== '' && !emailError && user.number.trim() !== ''){
       setCurrentStep(curr => curr + 1)
     }
+  }
+
+  const checkEmail = () => {
+    user.email.trim() !== '' ? 
+      isEmail(user.email.trim()) ? setEmailError(false)  : setEmailError(true)
+    : setEmailError(true)
+  }
+
+  const isEmail = (email) => {
+    return /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/.test(
+      email
+    )
   }
 
   const handleNextStep = () => {
