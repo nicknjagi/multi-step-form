@@ -1,6 +1,6 @@
 import React from 'react'
 
-const PersonalInfo = ({setUser,user,nameError, emailError,numberError}) => {
+const PersonalInfo = ({setUser,user,nameError,isEmail, emailError,numberError}) => {
   
   const handleChange = (e) => {
     setUser({ ...user, [e.target.name]: e.target.value })
@@ -20,7 +20,7 @@ const PersonalInfo = ({setUser,user,nameError, emailError,numberError}) => {
         value={user.name}
         placeholder="e.g. Stephen King"
       />
-      <label htmlFor="email"><span>Email Address</span><span className={emailError ? 'error' : 'error-hidden'}>This field is required</span></label>
+      <label htmlFor="email"><span>Email Address</span><span className={emailError ? 'error' : 'error-hidden'}>{!isEmail(user.email) ? 'Please enter a valid email' : 'This field is required'}</span></label>
       <input
         onChange={handleChange}
         type="email"
