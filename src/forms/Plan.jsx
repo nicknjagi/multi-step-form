@@ -29,8 +29,8 @@ const Plan = ({user,setUser}) => {
           <img src={arcade} aria-hidden="true" />
           <span className="label-text">
             <span className="title">Arcade</span>
-            <span className="price">$9/mo</span>
-            {/* <span>2 months free</span> */}
+            <span className="price">{user.billing === 'yearly' ? '$90/yr' :'$9/mo'}</span>
+            {user.billing === 'yearly' ? <span>2 months free</span> : null}
           </span>
         </label>
         <input
@@ -46,8 +46,8 @@ const Plan = ({user,setUser}) => {
           <img src={advanced} aria-hidden="true" />
           <span className="label-text">
             <span className="title">Advanced</span>
-            <span className="price">$12/mo</span>
-            {/* <span>2 months free</span> */}
+            <span className="price">{user.billing === 'yearly' ? '$120/yr': '$12/mo'}</span>
+            {user.billing === 'yearly' ? <span>2 months free</span> : null}
           </span>
         </label>
         <input
@@ -61,8 +61,8 @@ const Plan = ({user,setUser}) => {
           <img src={pro} aria-hidden="true" />
           <span className="label-text">
             <span className="title">Pro</span>
-            <span className="price">$15/mo</span>
-            {/* <span>2 months free</span> */}
+            <span className="price">{user.billing === 'yearly' ? '$150/yr':'$15/mo'}</span>
+            {user.billing === 'yearly' ? <span>2 months free</span> : null}
           </span>
         </label>
         <input type="radio" name="plan" id="pro" onChange={handleRadioInput} />
