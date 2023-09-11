@@ -28,6 +28,10 @@ function App() {
     console.log('form submitted!');
   }
 
+  const isEmail = (email) => {
+    return /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/.test(email)
+  }
+
   return (
     <>
       <main>
@@ -38,6 +42,7 @@ function App() {
               <PersonalInfo
                 setUser={setUser}
                 user={user}
+                isEmail={isEmail}
                 nameError={nameError}
                 emailError={emailError}
                 numberError={numberError}
@@ -52,6 +57,7 @@ function App() {
             <NextToggle
               user={user}
               emailError={emailError}
+              isEmail={isEmail}
               setNameError={setNameError}
               setEmailError={setEmailError}
               setNumberError={setNumberError}
