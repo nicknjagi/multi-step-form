@@ -1,4 +1,4 @@
-const NextToggle = ({user,setCurrentStep, currentStep,setNameError,setEmailError,emailError,setNumberError}) => {
+const NextToggle = ({user,setCurrentStep, currentStep,setNameError,setEmailError,emailError,setNumberError,isEmail}) => {
 
   const checkErrors = () => {
     user.name.trim() !== '' ? setNameError(false) : setNameError(true)
@@ -11,14 +11,8 @@ const NextToggle = ({user,setCurrentStep, currentStep,setNameError,setEmailError
 
   const checkEmail = () => {
     user.email.trim() !== '' ? 
-      isEmail(user.email.trim()) ? setEmailError(false)  : setEmailError(true)
-    : setEmailError(true)
-  }
-
-  const isEmail = (email) => {
-    return /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/.test(
-      email
-    )
+      isEmail(user.email.trim()) ? setEmailError(curr => curr = false)  : setEmailError(curr => curr = true)
+    : setEmailError(curr => curr = true)
   }
 
   const handleNextStep = () => {
